@@ -5280,7 +5280,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.0000000030080112, y: 0.98460054, z: -0.17481945, w: -0.000000016941419}
+  m_LocalRotation: {x: 0.0000000030080094, y: 0.98460054, z: -0.17481945, w: 0.00000001694141}
   m_LocalPosition: {x: 535.76, y: 8.453, z: 567.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7399,6 +7399,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 922578471}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1508083642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508083640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a92bf3142e93534fa93a158d925ce0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupList:
+  - {fileID: 671152645406060574, guid: 5121771bfe889f24b82115b4c54e07cb, type: 3}
+  - {fileID: 671152645406060574, guid: c48b07c5e0c8eea4fb05d2c4daa98f1a, type: 3}
+  randomNumberInList: 0
+  chosenPowerup: {fileID: 0}
 --- !u!4 &1508083643 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1380651029056787231, guid: b3b632acf26e04817952ec52895565e3,
@@ -7745,7 +7762,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533646793}
-  m_LocalRotation: {x: -0.0000000030080112, y: 0.98460054, z: -0.17481945, w: -0.000000016941419}
+  m_LocalRotation: {x: 0.0000000030080094, y: 0.98460054, z: -0.17481945, w: 0.00000001694141}
   m_LocalPosition: {x: 535.76, y: 8.453, z: 567.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

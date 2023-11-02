@@ -9,7 +9,6 @@ public class itemBoxFeatures : MonoBehaviour
     public float amp = 1f;
 
     Vector3 posBuffer;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +26,20 @@ public class itemBoxFeatures : MonoBehaviour
         transform.position = posBuffer;
 
         Debug.Log(transform.position);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            gameObject.SetActive(false);
+
+            Invoke("itemBoxRespawn", 3f);
+        }
+    }
+
+    private void itemBoxRespawn()
+    {
+        gameObject.SetActive(true);
     }
 }
