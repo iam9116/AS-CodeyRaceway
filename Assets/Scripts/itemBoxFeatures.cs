@@ -24,8 +24,6 @@ public class itemBoxFeatures : MonoBehaviour
         posBuffer.y += Mathf.Sin(Time.fixedTime * freq) * amp;
 
         transform.position = posBuffer;
-
-        Debug.Log(transform.position);
     }
 
     private void OnCollisionEnter(Collision collision)
