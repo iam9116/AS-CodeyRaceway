@@ -8,6 +8,7 @@ public class NavMeshMovement : MonoBehaviour
     public Transform goal;
     private Animator animator;
     private NavMeshAgent agent;
+    private GameObject[] Obstacles;
 
     public float speed = 50f;
 
@@ -15,24 +16,31 @@ public class NavMeshMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //rb = GetComponent<Rigidbody>();
-
-        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-        GameObject obstacle = GameObject.FindGameObjectsWithTag("Obstacles")[0];
-        agent.destination = obstacle.transform.position;
-
+        Obstacles = GameObject.FindGameObjectsWithTag("Obstacles");
+        if (Obstacles.Length > 0)
+        {
+            agent.SetDestination(Obstacles[0].transform.position);
+        }
     }
 
-// Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
-        //Debug.Log(agent.destination);
-        //Vector3 direction = transform.forward * Time.deltaTime * speed;
-        //rb.velocity = direction;
+        
+
+        if (agent.remainingDistance < 0.5f && Obstacles.Length > 0)
+        {
+            //Destroy(Obstacles[0]);
+            Obstacles = GameObject.FindGameObjectsWithTag("Obstacles");
+            if (Obstacles.Length > 0)
+            {
+                agent.SetDestination(Obstacles[0].transform.position);
+            }
+        }
     }
 
-    private void OnTriggerEnter(Collider collision)
+private void OnTriggerEnter(Collider collision)
     {
         Debug.Log(collision.gameObject.name);
 

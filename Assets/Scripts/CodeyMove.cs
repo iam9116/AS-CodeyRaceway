@@ -25,7 +25,7 @@ public class CodeyMove : MonoBehaviour
             float vertical = Input.GetAxis("Vertical");
             float horizontal = Input.GetAxis("Horizontal");            
             Vector3 rotation = new Vector3(0, horizontal * _rotationSpeed * Time.deltaTime, 0);
-            move = transform.forward * Speed * Time.deltaTime * vertical;
+            move = (transform.forward * vertical * Speed) * Time.deltaTime;
             transform.Rotate(rotation);
 
             rb.AddForce(move, ForceMode.VelocityChange);
@@ -37,5 +37,7 @@ public class CodeyMove : MonoBehaviour
         {
             rb.AddForce(Vector3.up * 3);
         }
+
+        Debug.Log(Speed);
     }
 }

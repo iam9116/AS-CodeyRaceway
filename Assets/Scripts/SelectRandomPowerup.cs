@@ -30,7 +30,7 @@ public class SelectRandomPowerup : MonoBehaviour
         if (other.gameObject.tag == "itemBoxes")
         {
             randomNumberInList = 1;
-            //randomNumberInList = Random.Range(0, powerupList.Count);
+            randomNumberInList = Random.Range(0, powerupList.Count);
             chosenPowerup = powerupList[randomNumberInList];
         }
     }

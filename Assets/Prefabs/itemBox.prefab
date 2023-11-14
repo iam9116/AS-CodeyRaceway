@@ -108,4 +108,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   freq: 2
-  amp: 10
+  amp: 8
