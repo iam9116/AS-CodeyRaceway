@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerFinishLine : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class TriggerFinishLine : MonoBehaviour
         {
             if (checkpointTracker.triggeredCheckpoints == checkpointTracker.numberOfCheckpoints)
             {
-                print("☆*: .｡. o(≧▽≦)o .｡.:*☆     ○( ＾皿＾)っ Hehehe…");
+                SceneManager.LoadScene(1);
             }
             else
             {

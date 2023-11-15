@@ -18,7 +18,7 @@ public class SelectRandomPowerup : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && chosenPowerup != null)
         {
-            Vector3 spawnPosition = transform.position + (transform.forward * spawnDistance);
+            Vector3 spawnPosition = transform.position + new Vector3 (0, 2.5f, 0) + (transform.forward * spawnDistance);
 
             Instantiate(chosenPowerup, spawnPosition, transform.rotation);
             chosenPowerup = null;

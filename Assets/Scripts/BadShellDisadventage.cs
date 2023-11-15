@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class BadShellDisadventage : MonoBehaviour
 {
-    CodeyMove codeSpeed;
+    public CodeyMove codeSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        codeSpeed = GameObject.Find("Codey").GetComponent<CodeyMove>();
+        Debug.Log("I'm alive@!!");
+        codeSpeed = GameObject.FindGameObjectWithTag("Player").GetComponent<CodeyMove>();
         codeSpeed.Speed = 75f;
     }
 
@@ -17,6 +18,14 @@ public class BadShellDisadventage : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Tracks")
+        {
+            Debug.Log("I'm HIT@!!");
+        }
     }
 }
 
