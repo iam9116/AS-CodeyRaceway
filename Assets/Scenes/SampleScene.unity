@@ -8308,7 +8308,7 @@ MonoBehaviour:
   - {fileID: 8763881858336974421, guid: b8f128fe9edb14c4d9dcf06bf6f8cb46, type: 3}
   randomNumberInList: 0
   chosenPowerup: {fileID: 0}
-  spawnDistance: 2
+  spawnDistance: 0.5
 --- !u!4 &1508083643 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1380651029056787231, guid: b3b632acf26e04817952ec52895565e3,
